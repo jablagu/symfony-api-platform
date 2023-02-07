@@ -1,0 +1,18 @@
+api_platform:
+    mapping:
+        # Indicamos donde se van a encontrar todas las configuraciones relacionadas con entidades, etc
+        paths:
+            # Indicamos en que directorio se van a encontrar nuestros recursos
+            - '%kernel.project_dir%/config/api_platform/resources'
+    patch_formats:
+        json: ['application/merge-patch+json']
+    # swagger 
+    swagger:
+        versions: [3]
+        api_keys:
+            apiKey:
+                name: Authorization
+                type: header
+    title: Symfony API Platform
+    version: 1.0
+    show_webby: false
