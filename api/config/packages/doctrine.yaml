@@ -8,8 +8,10 @@ doctrine:
         auto_mapping: true
         mappings:
             App:
+                #Asociamos los ficheros de mapeo con las entidades
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
+                type: xml
+                dir: '%kernel.project_dir%/config/orm/mapping'
                 prefix: 'App\Entity'
                 alias: App
 
